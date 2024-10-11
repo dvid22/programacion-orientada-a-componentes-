@@ -1,53 +1,108 @@
-/* grupo 7: Estilos generales */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-header, footer {
-    background-color: #333;
-    color: white;
+/* Header styles */
+#main-header {
+    background-color: #0d10e0;
+    color: #fff;
+    padding: 20px;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.logo h1 {
+    font-size: 24px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
     text-align: center;
-    padding: 1rem;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.header-actions button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-nav {
-    background-color: #444;
-    padding: 1rem;
+/* Navigation styles */
+#main-nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+#main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+#main-nav a {
+    text-decoration: none;
+    color: #333;
 }
 
-section {
-    margin: 20px;
+/* Task list styles */
+.task-list {
+    padding: 20px;
+}
+.task-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-table {
+/* Task form styles */
+#task-form {
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Task table styles */
+#task-table table {
     width: 100%;
     border-collapse: collapse;
 }
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
+#task-table th, #task-table td {
+    border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button.delete {
-    background-color: #dc3545;
-}
-
-button:hover {
-    opacity: 0.9;
+/* Footer styles */
+#main-footer {
+    background-color: #0d10e0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
