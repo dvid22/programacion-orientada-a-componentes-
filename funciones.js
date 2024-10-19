@@ -1,17 +1,27 @@
-// grupo 8: Funcionalidad para agregar tarea
+// grupo 8: Funcionalidad para agregar y eliminar tarea
 document.getElementById('add-task').addEventListener('click', function() {
-    const taskName = document.getElementById('task-name').value;
-    if (taskName !== '') {
-        const table = document.getElementById('task-table-body');
+    const taskName = document.getElementById('task-name').value.trim();  // Elimina espacios en blanco
+    const table = document.getElementById('task-table-body');
+    const taskExists = Array.from(table.rows).some(row => row.cells[0].textContent === taskName);
+    
+    if (taskName === '') {
+        alert('Por favor, ingresa una tarea.');  // Validación de campo vacío
+    } else if (taskExists) {
+        alert('La tarea ya existe.');  // Validación para evitar duplicados
+    } else {
         const row = table.insertRow();
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
-        const cell3 = row.insertCell(2);
         
         cell1.textContent = taskName;
         cell2.innerHTML = '<button class="delete">Eliminar</button>';
         
         document.getElementById('task-name').value = '';  // Limpiar el campo
+
+        // Funcionalidad para eliminar tarea
+        cell2.querySelector('.delete').addEventListener('click', function() {
+            table.deleteRow(row.rowIndex - 1);  // Elimina la fila correspondiente
+        });
     }
 });
 
