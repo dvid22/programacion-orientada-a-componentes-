@@ -20,7 +20,7 @@ document.getElementById('add-task').addEventListener('click', function() {
 
         // Funcionalidad para eliminar tarea
         cell2.querySelector('.delete').addEventListener('click', function() {
-            table.deleteRow(row.rowIndex - 1);  // Elimina la fila correspondiente
+            table.deleteRow(row.rowIndex - 1);  // Eliminarr la fila correspondiente
         });
     }
 });
