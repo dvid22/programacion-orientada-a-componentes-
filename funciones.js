@@ -25,10 +25,10 @@ document.getElementById('add-task').addEventListener('click', function() {
     }
 });
 
-// Estudiante 10: Funcionalidad para eliminar tarea
+// Grupo 9: Funcionalidad para eliminar tarea
 document.getElementById('task-table-body').addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete')) {
-        const row = event.target.closest('tr');
-        row.remove();  // Eliminar la fila
+    if (event.target.classList.contains('delete')) { //Verificar si el elemento seleccionado se puede eliminar
+        const row = event.target.closest('tr'); //Selección del elemento más cercano
+        row.remove(); //Eliminar fila o tarea de la tabla
     }
 });
